@@ -1,0 +1,141 @@
+// /////////// TOUR //////////////////////
+.tour-section{
+	width:100%;
+	text-transform: uppercase;
+
+	.tour-featured{
+		padding:0px 0 50px;
+
+		.tour-box{
+			display:block;
+			cursor:default;
+			position:relative;
+			width:30%;
+			margin:0 1.5%;
+			height:250px;
+			float:left;
+			border:solid 7px $black;
+			display:flex;
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-ms-flexbox;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			@media (max-width:$tablet){
+				&:nth-child(3) {display:none;}
+				width:47%;
+			}
+			@media (max-width:$mobile){
+				width:100%;
+				float:none;
+				margin:0;
+				&:nth-child(2) {margin-top:30px;}
+			}
+
+			.tour-details{
+				text-align: center;
+				margin-bottom:28px;
+
+				div{
+					display:block;
+					text-shadow: -2px 0px $white;
+					z-index: 999;
+					font-size:21px;
+					line-height: 22px;
+					margin-bottom:0px;
+					position:relative;
+					letter-spacing: 0.5px;
+				}
+				.date{
+					font-size:35px;
+					margin-bottom:20px;
+					letter-spacing: 2px;						
+				}
+				.venue{
+					font-size:16px;
+					font-style: italic;
+				}
+			}
+			a.tickets{
+				width:103%;
+				margin-right:-5px;
+				background:$black;
+				position:absolute;
+				bottom:-28px;
+				left:50%;
+				transform:translate(-50%,-50%);
+				-webkit-transform:translate(-50%,-50%);
+				-moz-transform:translate(-50%,-50%);
+				-ms-transform:translate(-50%,-50%);
+				text-align: center;
+				@media (max-width:$desktop){}
+
+				div{
+					display:inline-block;
+					color:$white;
+					padding:15px 10px;
+				}
+			}
+		}
+	}
+
+	.gigpress-table{
+		// display:none;
+
+		a{
+			color:$black;
+			padding:0 5px;
+			margin-left:-5px;
+		}
+
+		tbody:nth-child(2),
+		tbody:nth-child(3),
+		tbody:nth-child(4){
+			display:none;
+		}
+		@media (max-width:$tablet){
+			tbody:nth-child(4) {display:table-row-group;}
+		}			
+
+		tbody{
+			background:$white;
+			color:$black;
+
+			&:nth-child(2n){
+				background:$off-white;
+			}
+
+			&:first-of-type{
+				background:$black;
+				color:$white;
+			}
+		}
+
+		.gigpress-row{
+
+			td{
+				padding-top:12px;
+				padding-bottom:12px;
+				border-bottom:none;
+				@media (max-width:500px){
+					font-size:15px;
+				}
+			}				
+		}
+		@media (max-width:500px){
+			.gigpress-venue,
+			.gigpress-country{display:none;}
+		}
+
+		.gigpress-info{
+			display:none;
+		}
+	}
+} // END TOUR SECTION

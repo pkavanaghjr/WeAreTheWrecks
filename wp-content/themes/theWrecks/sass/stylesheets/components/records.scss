@@ -1,0 +1,167 @@
+// /////////// ALUMBS //////////////////////
+.record-section{
+	background:url(../../images/album-bg3.png) no-repeat left 35% $black;
+	background-size:cover;
+	width:100%;
+	padding:110px 0 90px;
+	position:relative;
+	@media (max-width:675px){background-position:center;}
+
+	.left{
+		width:45%;
+		@media (max-width:675px){float:none; width:100%;}
+
+		.social-album-cover{
+			box-shadow:-2px 0px 0px $black;
+		}
+
+		.album-cover{
+			display:block;
+			width:80%;
+			position:relative;
+			box-shadow:-2px 0px 0px $black;
+			@media (max-width:$tablet){width:90%;}
+			@media (max-width:675px){width:70%;}
+			@media (max-width:$mobile){width:90%;}
+
+			img{
+				width:100%;
+			}
+
+			a{
+				width:100%;
+				background:$white;
+				position:absolute;
+				bottom:-40px;
+				left:50%;
+				transform:translate(-50%,-50%);
+				-webkit-transform:translate(-50%,-50%);
+				-moz-transform:translate(-50%,-50%);
+				-ms-transform:translate(-50%,-50%);
+				text-align: center;
+
+				div{
+					display:inline-block;
+					color:$black;
+					padding:15px 10px;
+				}
+			}
+		}
+	}
+
+	.right{
+		padding-top:20px;
+		width:55%;
+		@media (max-width:$desktop){padding-top:5px;}
+		@media (max-width:$tablet){padding-top:0px;}
+		@media (max-width:675px){float:none; width:100%;}
+
+		.album-title{
+			text-transform: uppercase;
+			font-size:70px;
+			line-height:60px;
+			display:block;
+			text-shadow: -2px 0px $black;
+			z-index: 9999;	
+			text-align:right;
+			width:100%;
+			float:none;
+			@media (max-width:$desktop){font-size:50px; line-height:40px;}
+			@media (max-width:$tablet){font-size:40px; line-height:34px;}
+			@media (max-width:675px){text-align:left; margin-top:30px; font-size:50px; line-height:42px;}
+			@media (max-width:$mobile){font-size:36px; line-height:30px;}
+			@media (max-width:350px){font-size:30px; line-height:26px;}
+		}
+
+		.tracklist{
+			// float:right;
+			margin-top:10px;
+			text-transform: uppercase;
+			@media (max-width:$tablet){margin-top:5px;}
+
+			li{
+				text-align: right;
+				font-size:24px;
+				line-height:36px;
+				text-shadow: -2px 0px $black;
+				letter-spacing: 1.5px;
+				@media (max-width:$desktop){font-size:22px; line-height:30px;}
+				@media (max-width:$tablet){font-size:21px; line-height:28px;}
+				@media (max-width:675px){text-align:left; font-size:22px; line-height:34px;}
+				@media (max-width:$mobile){font-size:18px; line-height:33px;}
+				@media (max-width:350px){font-size:16px; line-height:32px;}
+
+				a{
+					color:$white;
+					padding:0 5px;
+
+					&:after{
+						font-family:'FontAwesome';
+						content:'\f04b';
+						font-size:0.5em;
+						vertical-align: middle;
+						line-height: 1px;
+						padding-left:15px;
+						@media (max-width:$mobile){font-size:0.7em; padding-left:12px;}
+					}
+				}
+				.track-number{
+					width:30px;
+					display:inline-block;
+				}
+				
+			}
+		}
+
+		.button-border{
+			margin-top:30px;
+			float:right;
+			@media (max-width:675px){float:none;}
+		}
+
+		iframe{
+			margin:20px 0;
+			float:right;
+		}
+	}
+
+	.audio-player{	
+		max-width: 1000px;
+		margin:0 auto;
+
+		.mejs-container, 
+		.mejs-container .mejs-controls, 
+		.mejs-embed, 
+		.mejs-embed body{
+			background:transparent;
+		}
+		div.mejs-container.mejs-audio{
+			max-width: 1000px;
+			margin:0 auto;
+			visibility: hidden;
+			opacity:0;
+			position:absolute;
+			bottom:-30px;
+			// bottom:0;
+			transition:all 0.5s;
+			-webkit-transition:all 0.5s;
+			-moz-transition:all 0.5s;
+			-ms-transition:all 0.5s;
+
+			.mejs-controls{
+				// padding:0 5%;
+				max-width: 1000px;
+			}
+			.mejs-controls .mejs-time-rail{ 
+				.mejs-time-total {background:rgba(255,255,255,0.25);}
+				.mejs-time-loaded {background:rgba(255,255,255,0.4);}
+				.mejs-time-current {background:$white;}
+			}
+		}
+		div.mejs-container.mejs-audio.show-controls{
+			bottom:0px;
+			visibility: visible;
+			opacity:1;
+		}
+	}
+} // END RECORD SECTION

@@ -1,0 +1,47 @@
+// functions.scss
+
+@function em($target, $context: $font-size) {
+  @return ($target / $context) * 1em;
+}
+
+@mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  -o-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin transition($time) {
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	-ms-transition: all $time;
+	-o-transition: all $time;
+	transition: all $time;
+}
+
+@mixin transform($prop) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	-ms-transform: $prop;
+	-o-transform: $prop;
+	transform: $prop;
+}
+
+@mixin box-shadow($prop) {
+	-webkit-box-shadow: $prop;
+	-moz-box-shadow: $prop;
+	-ms-box-shadow: $prop;
+	-o-box-shadow: $prop;
+	box-shadow: $prop;
+}
+
+@mixin gradient($topColor, $bottomColor) {
+	background-color: -webkit-linear-gradient($topColor, $bottomColor);
+	background-color: -moz-linear-gradient($topColor, $bottomColor);
+	background-color: -ms-linear-gradient($topColor, $bottomColor);
+	background-color: -o-linear-gradient($topColor, $bottomColor);
+	background-color: linear-gradient($topColor, $bottomColor);
+}
+
+
+

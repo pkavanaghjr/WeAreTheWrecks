@@ -1,0 +1,81 @@
+// /////////// CONTACT //////////////////////
+.contact-section{
+
+	.contact-form{
+		width:100%;
+		float:left;
+
+		.frm_forms{
+
+			form.frm-show-form{
+
+				.frm_form_fields{
+
+					label{
+						color:$white;
+						text-transform: uppercase;
+						font-family:'galano',sans-serif;
+					}
+					span.frm_required{
+						color:$white;
+					}
+					input,
+					textarea,
+					select{
+						text-transform: uppercase;
+						border:solid 3px $white;
+						font-family:'galano',sans-serif;
+						font-size:12px;
+						letter-spacing: 1px;
+						padding:10px 7px 9px;
+						color:$white;
+						background-color:$black;
+						border-radius:0;
+						-webkit-border-radius:0;
+						-moz-border-radius:0;
+						transition:all 0.3s;
+						-webkit-transition:all 0.3s;
+						-moz-transition:all 0.3s;
+						-ms-transition:all 0.3s;
+					}
+					select{
+						appearance:none;
+						-webkit-appearance:none;
+						-moz-appearance:none;
+					}
+					input[type='submit']{
+						opacity:0;
+						visibility: hidden;
+					}
+					.contact-button{
+						cursor:pointer;
+						text-transform: uppercase;
+						font-family:'galano',sans-serif;
+						font-size:16px;
+						padding:9px 30px 7px;
+						border:solid 3px $white;
+						margin-left:-91px;
+					}
+
+					.frm_half{
+						width:49%;
+						margin-right:2%;
+						@media (max-width:600px){width:100%; margin-right:0;}
+
+						&:nth-child(2n){
+							margin-right:0px;
+						}
+					}
+				}
+				.frm_form_field.frm_right_half, .frm_form_field.frm_right_third, .frm_form_field.frm_right_two_thirds, .frm_form_field.frm_right_fourth, .frm_form_field.frm_right_fifth, .frm_form_field.frm_right_inline, .frm_form_field.frm_last_half, .frm_form_field.frm_last_third, .frm_form_field.frm_last_two_thirds, .frm_form_field.frm_last_fourth, .frm_form_field.frm_last_fifth, .frm_form_field.frm_last_sixth, .frm_form_field.frm_last_seventh, .frm_form_field.frm_last_eighth, .frm_form_field.frm_last_inline, .frm_form_field.frm_last, .frm_form_field.frm_half, .frm_submit.frm_half, .frm_form_field.frm_third, .frm_submit.frm_third, .frm_form_field.frm_two_thirds, .frm_form_field.frm_fourth, .frm_submit.frm_fourth, .frm_form_field.frm_three_fourths, .frm_form_field.frm_fifth, .frm_submit.frm_fifth, .frm_form_field.frm_two_fifths, .frm_form_field.frm_three_fifths, .frm_form_field.frm_four_fifths, .frm_form_field.frm_sixth, .frm_submit.frm_sixth, .frm_form_field.frm_seventh, .frm_submit.frm_seventh, .frm_form_field.frm_eighth, .frm_submit.frm_eighth, .frm_form_field.frm_inline, .frm_submit.frm_inline{
+					margin-left:0 !important;
+				}
+
+			}
+		}
+	}
+	
+} // CLOSE CONTACT SECTION
+.form-focus{
+	background-color:rgba(255,255,255,0.25) !important;
+}
